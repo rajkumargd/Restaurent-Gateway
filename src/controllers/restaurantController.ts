@@ -14,7 +14,7 @@ export default class RestaurantController {
     try {
       const id = parseInt(req.params.id, 10);
       const restaurantData = await this.restaurantService.getRestaurant(id);
-      console.log(restaurantData)
+      
       res.status(200).json(restaurantData);
     } catch (error) {
       if (!Boom.isBoom(error)) {
