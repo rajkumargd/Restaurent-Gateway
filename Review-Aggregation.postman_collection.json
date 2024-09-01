@@ -1,0 +1,343 @@
+{
+	"info": {
+		"_postman_id": "5290d67b-4871-4b44-acc4-d80ced92b9e8",
+		"name": "Review-Aggregation",
+		"description": "Aggregate restaurant reviews using the Google Places API. The service will include basic authentication and review management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21591206",
+		"_collection_link": "https://speeding-water-656978.postman.co/workspace/32ab5cd8-e47b-4038-84b3-1211c945a6d8/collection/21591206-5290d67b-4871-4b44-acc4-d80ced92b9e8?action=share&source=collection_link&creator=21591206"
+	},
+	"item": [
+		{
+			"name": "User Registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"rajkumargd13\",\n    \"password\":\"password123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{RESTAURANT_GATEWAY}}/api/auth/register",
+					"host": [
+						"{{RESTAURANT_GATEWAY}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				},
+				"description": "Endpoint: /api/auth/register"
+			},
+			"response": []
+		},
+		{
+			"name": "User Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"rajkumargd10\",\n    \"password\":\"password123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{RESTAURANT_GATEWAY}}/api/auth/login",
+					"host": [
+						"{{RESTAURANT_GATEWAY}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				},
+				"description": "Endpoint: /api/auth/login"
+			},
+			"response": []
+		},
+		{
+			"name": "User Logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjMsInVzZXJuYW1lIjoicmFqa3VtYXJnZDEwIiwiaWF0IjoxNzI1MDczNjA1LCJleHAiOjE3MjUwNzcyMDV9.lKeUn3Z9P3Ln9RZunEkfniQ-1qyVJyG9BOPe-fntb_o",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"rajkumargd10\",\n    \"password\":\"password123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{RESTAURANT_GATEWAY}}/api/auth/logout",
+					"host": [
+						"{{RESTAURANT_GATEWAY}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"logout"
+					]
+				},
+				"description": "Endpoint: /api/auth/logout\n\nSince JWT is Stateless so its just accept the request. We may log & activity can be capture in db"
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve Restaurant",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjMsInVzZXJuYW1lIjoicmFqa3VtYXJnZDEwIiwiaWF0IjoxNzI1MTY5ODY4LCJleHAiOjE3MjUxNzM0Njh9.hlUhnZXdxayUqIH_YVrZwvUQDUeXqbOWC-HfO2pLU1E",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{RESTAURANT_GATEWAY}}/api/restaurants/1",
+					"host": [
+						"{{RESTAURANT_GATEWAY}}"
+					],
+					"path": [
+						"api",
+						"restaurants",
+						"1"
+					]
+				},
+				"description": "Endpoint: api/restaurants/:id"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Restaurant",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjMsInVzZXJuYW1lIjoicmFqa3VtYXJnZDEwIiwiaWF0IjoxNzI1MTY4ODgxLCJleHAiOjE3MjUxNzI0ODF9.GtD4yvHu6YO4nVD9ZT-hjIQglX6cDKXET_KvtWZ5Sd8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"googlePlaceID\":\"googlePlaceID 3\", \"address\":\"addr adyar 2\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{RESTAURANT_GATEWAY}}/api/restaurants/1",
+					"host": [
+						"{{RESTAURANT_GATEWAY}}"
+					],
+					"path": [
+						"api",
+						"restaurants",
+						"1"
+					]
+				},
+				"description": "Endpoint: api/restaurants/:id"
+			},
+			"response": []
+		},
+		{
+			"name": "Add Review",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjMsInVzZXJuYW1lIjoicmFqa3VtYXJnZDEwIiwiaWF0IjoxNzI1MTY4ODgxLCJleHAiOjE3MjUxNzI0ODF9.GtD4yvHu6YO4nVD9ZT-hjIQglX6cDKXET_KvtWZ5Sd8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"review_id\": \"reviewID3\",\n    \"restaurant_id\": 1,\n    \"review_text\": \"review text for sample to upload\",\n    \"rating\": 5\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{RESTAURANT_GATEWAY}}/api/reviews",
+					"host": [
+						"{{RESTAURANT_GATEWAY}}"
+					],
+					"path": [
+						"api",
+						"reviews"
+					]
+				},
+				"description": "Endpoint: /api/reviews"
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve Reviews",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjMsInVzZXJuYW1lIjoicmFqa3VtYXJnZDEwIiwiaWF0IjoxNzI1MTcyNjMxLCJleHAiOjE3MjUxNzYyMzF9.3UarqxMjk4vh_0zM-TnOvIW1E8d8xK95obtjM_Nr8gY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{RESTAURANT_GATEWAY}}/api/reviews?limit=1&restaurantId=1&lastEvaluatedKey=%7B%22restaurant_id%22%3A%7B%22N%22%3A%221%22%7D%2C%22review_id%22%3A%7B%22S%22%3A%22reviewID3%22%7D%7D",
+					"host": [
+						"{{RESTAURANT_GATEWAY}}"
+					],
+					"path": [
+						"api",
+						"reviews"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "restaurantId",
+							"value": "1"
+						},
+						{
+							"key": "lastEvaluatedKey",
+							"value": "%7B%22restaurant_id%22%3A%7B%22N%22%3A%221%22%7D%2C%22review_id%22%3A%7B%22S%22%3A%22reviewID3%22%7D%7D"
+						}
+					]
+				},
+				"description": "Endpoint: /api/reviews\n\nlastEvaluatedKey is urlencoded json"
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve Google Places Data",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjMsInVzZXJuYW1lIjoicmFqa3VtYXJnZDEwIiwiaWF0IjoxNzI1MTY4ODgxLCJleHAiOjE3MjUxNzI0ODF9.GtD4yvHu6YO4nVD9ZT-hjIQglX6cDKXET_KvtWZ5Sd8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{RESTAURANT_GATEWAY}}/api/integrations/google/ChIJs5ydyTiuEmsR0fRSlU0C7k0",
+					"host": [
+						"{{RESTAURANT_GATEWAY}}"
+					],
+					"path": [
+						"api",
+						"integrations",
+						"google",
+						"ChIJs5ydyTiuEmsR0fRSlU0C7k0"
+					]
+				},
+				"description": "Endpoint: /api/integrations/google/:restaurant_id"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "RESTAURANT_GATEWAY",
+			"value": "http://localhost:3000",
+			"type": "string"
+		}
+	]
+}
