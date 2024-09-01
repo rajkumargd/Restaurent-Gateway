@@ -2,6 +2,10 @@
 
 This project is a Restaurant Review API that allows users to register, login, manage restaurants, write reviews, and integrate with Google Places API.
 
+## Stack
+
+NodeJs, ExpressJs, MySql, DynamoDB
+
 ## Environment Setup
 
 This project has designed to deploy **"Containerized Microservice Architecture"**
