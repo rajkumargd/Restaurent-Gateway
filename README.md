@@ -4,7 +4,8 @@ This project is a Restaurant Review API that allows users to register, login, ma
 
 ## Environment Setup
 
-This project has designed to deploy > containerized microservice architecture. Following Instructions are common for all the repos
+This project has designed to deploy **"Containerized Microservice Architecture"**
+Following Instructions are common for all the repos
 
 1. Clone the repository:
    ```
@@ -112,7 +113,7 @@ To run the test suite:
 
 ## Postman Collection
 
-You can find the Postman collection in Restaurant Gateway Repo root folder
+You can find the Postman collection in Restaurant Gateway Repo root folder "Review-Aggregation.postman_collection"
 
 ## Improvements
 
