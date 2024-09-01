@@ -31,6 +31,7 @@ dist/
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+Review-Aggregation.postman_collection.json
 
 # VS Code files
 .history/
