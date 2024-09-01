@@ -1,0 +1,20 @@
+node_modules
+*.log
+
+tests
+*.test.ts
+*.test.js
+
+# .env
+jest.config.js
+
+.git
+.gitignore
+
+Dockerfile.dev
+# Dockerfile.prod
+
+docker-compose.yml
+package-lock.json
+
+.DS_Store
