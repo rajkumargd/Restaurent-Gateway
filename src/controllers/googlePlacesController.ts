@@ -13,7 +13,7 @@ class GooglePlacesController {
     try {
       const { restaurant_id } = req.params;
       const restaurantData = await this.googlePlaceService.getGooglePlaceData(restaurant_id);
-      console.log(restaurantData)
+      
       res.status(200).json(restaurantData);
     } catch (error) {
       if (!Boom.isBoom(error)) {
