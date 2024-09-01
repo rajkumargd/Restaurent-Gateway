@@ -125,3 +125,5 @@ Here are some potential improvements for the codebase:
 4. Add more comprehensive error handling and logging.
 5. Implement Cloudwatch to get errors into production
 6. DTO & RO can be implemented
+7. Deployment workflow to be added
+8. Test case can be run in the workflow 
