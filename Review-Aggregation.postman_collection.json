@@ -182,7 +182,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjMsInVzZXJuYW1lIjoicmFqa3VtYXJnZDEwIiwiaWF0IjoxNzI1MTY4ODgxLCJleHAiOjE3MjUxNzI0ODF9.GtD4yvHu6YO4nVD9ZT-hjIQglX6cDKXET_KvtWZ5Sd8",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjQsInVzZXJuYW1lIjoicmFqa3VtYXJnZDExIiwiaWF0IjoxNzI1MjQyMzA4LCJleHAiOjE3MjUyNDU5MDh9.IKbXWtqL-5b6XUrpCDVLYiDlXRD4Zauf0atHJxicEDs",
 							"type": "string"
 						}
 					]
@@ -191,7 +191,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"review_id\": \"reviewID3\",\n    \"restaurant_id\": 1,\n    \"review_text\": \"review text for sample to upload\",\n    \"rating\": 5\n  }",
+					"raw": "{\n    \"restaurant_id\": 2,\n    \"review_text\": \"review text for sample to upload\",\n    \"rating\": 5\n  }",
 					"options": {
 						"raw": {
 							"language": "json"
